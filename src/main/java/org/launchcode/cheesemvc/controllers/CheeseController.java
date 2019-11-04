@@ -15,7 +15,7 @@ import java.util.Map;
 @RequestMapping("cheese")
 public class CheeseController {
 // static so all methods inside this class can use it
-    //replaces arraylist with hashmap to add description of cheese
+    //replaced arraylist with hashmap in class 4 exercises to add description of cheese
     // key: value = cheese: description
     static HashMap<String, String> cheeses = new HashMap<>();
 
@@ -41,6 +41,7 @@ public class CheeseController {
         return "redirect:";
     }
 
+    //removing added in studio CheeseMVC
     @RequestMapping(value = "delete", method = RequestMethod.GET)
     public String displayDeleteCheeseForm(Model model){
         model.addAttribute("title", "Delete Cheese");

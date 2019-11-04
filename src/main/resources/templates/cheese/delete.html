@@ -8,11 +8,15 @@
     <h1 th:text="${title}">Default Title</h1>
     <nav th:replace="fragments :: navigation"></nav>
 
+<!--    removing added in studio CheeseMVC-->
     <form method="post">
         <label>Cheese to Remove:</label>
+        <br>
         <tr th:each="cheese : ${cheeses}">
-            <input type="checkbox"  name = "cheeseName"  th:value="${cheese.key}"th:text="${cheese}"/>
+            <input type="checkbox"  name="cheeseName"  th:value="${cheese.key}" th:text="${cheese}"/>
+            <br>
         </tr>
+        <br>
         <input type="submit" value="Delete Cheese"/>
     </form>
 </body>
